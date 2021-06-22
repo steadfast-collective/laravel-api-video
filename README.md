@@ -41,7 +41,70 @@ API_VIDEO_KEY=....
 
 ### Usage
 
-TODO
+The primary way to use this package is via [the Facade](https://github.com/steadfast-collective/laravel-api-video/blob/main/src/Facades/ApiVideo.php). If you'd prefer to not use the class, you may use the `ApiVideo` class directly, like the below example.
+
+```php
+use SteadfastCollective\ApiVideo\ApiVideo;
+
+return (new ApiVideo)->getVideo(...);
+```
+
+### Get delegate token
+
+TODO: docs link
+
+```php
+use SteadfastCollective\ApiVideo\Facades\ApiVideo;
+
+return ApiVideo::getDelegateToken();
+```
+
+### Get video
+
+> [Docs: Show a video](https://docs.api.video/reference#get-video)
+
+```php
+use SteadfastCollective\ApiVideo\Facades\ApiVideo;
+
+return ApiVideo::getVideo($videoId);
+```
+
+**Parameters**
+
+* `videoId`: The unique identifier for the video you want details about.
+
+### Update video
+
+> [Docs: Update a video](https://docs.api.video/reference#patch-video)
+
+```php
+use SteadfastCollective\ApiVideo\Facades\ApiVideo;
+
+return ApiVideo::updateVideo($videoId, [$params]);
+```
+
+**Parameters**
+
+* `videoId`: The video ID for the video you want to update.
+* `params`: Array of parameters you wish to send to api.video. [List of available parameters.](https://docs.api.video/reference#patch-video)
+
+### Delete video
+
+> [Docs: Delete a video](https://docs.api.video/reference#delete-video)
+
+```php
+use SteadfastCollective\ApiVideo\Facades\ApiVideo;
+
+return ApiVideo::deleteVideo($videoId);
+```
+
+**Parameters**
+
+* `videoId`: The video ID for the video you want to delete.
+
+### Other endpoints?
+
+Currently this SDK only provides a few of the available API methods provided by api.video's API. However, if you're in need of any others, please create an issue and we'll see to adding it!
 
 ## License
 
