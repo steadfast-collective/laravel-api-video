@@ -1,0 +1,59 @@
+{
+    "name": "steadfastcollective/laravel-api-video",
+    "description": "Laravel package for API.Video",
+    "keywords": [
+        "steadfast-collective",
+        "laravel",
+        "video",
+        "api.video"
+    ],
+    "homepage": "https://github.com/steadfast-collective/laravel-api-video",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Breia",
+            "email": "andre@steadfastcollective.com",
+            "homepage": "https://steadfastcollective.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Duncan McClean",
+            "email": "duncan@steadfastcollective.com",
+            "homepage": "https://steadfastcollective.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "api-video/php-sdk": "^1.8",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra\/testbench": "^6.0",
+        "phpunit\/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SteadfastCollective\\ApiVideo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SteadfastCollective\\ApiVideo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SteadfastCollective\\ApiVideo\\ServiceProvider"
+            ]
+        }
+    }
+}
